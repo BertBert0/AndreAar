@@ -1,0 +1,24 @@
+Oppgave 1.
+Så lenge som modul 10 (rest) av t er større enn 0 så vil strengen "s" inneholde verdien av t%10 + verdien som ligger i s, verdien i t vil deretter endres til verdien av t/10. Verdien i både s og t vil bli overskrevet for hver gang. Med tallet/tallene fra forje runde vil legge seg til bakerst på strengen s.
+
+Vil tilslutt printe ut "s = 'verdien i s'"
+
+
+
+Oppgave 2.
+    int bh = 400;
+    int tDel = bh/3;
+    makeWindow("Oppgave2", bh, bh);
+    // Øverst
+    drawRectangle(tDel*2, 0, tDel, tDel);
+    // Midten
+    drawRectangle(tDel, tDel, tDel, tDel);
+    drawCircle(bh/2, bh/2, bh/2);
+
+    // Nederst
+    drawRectangle(0, tDel*2, tDel, tDel);
+
+
+
+
+Oppgave 3.
