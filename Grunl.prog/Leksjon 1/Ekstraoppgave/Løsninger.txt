@@ -1,5 +1,7 @@
-Oppgave 1.
+﻿Oppgave 1.
 Så lenge som modul 10 (rest) av t er større enn 0 så vil strengen "s" inneholde verdien av t%10 + verdien som ligger i s, verdien i t vil deretter endres til verdien av t/10. Verdien i både s og t vil bli overskrevet for hver gang. Med tallet/tallene fra forje runde vil legge seg til bakerst på strengen s.
+
+-->Fjerner alt forran "0" <--
 
 Vil tilslutt printe ut "s = 'verdien i s'"
 
@@ -22,3 +24,19 @@ Oppgave 2.
 
 
 Oppgave 3.
+      public static int antallNegative(int x, int y, int z){
+      int antallNeg = 0;
+        if ( x < 0 )
+          antallNeg++;
+        if ( y < 0 )
+          antallNeg++;
+        if ( z < 0 )
+          antallNeg++;
+
+        return antallNeg;
+
+	// Kall på metode
+	int svar = Heltall.antallNegative(-1,2,-3);
+    	//skriver ut
+   	 String utTekst = "Ant. neg. heltall: "+ svar;
+    	showMessageDialog(null, utTekst);
