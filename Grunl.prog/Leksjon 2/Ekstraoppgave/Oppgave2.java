@@ -9,6 +9,8 @@ public class Oppgave2 extends EasyGraphics {   // L14
     int toDel = bh/2;
     int svar = 2;
     makeWindow("Oppgave2", bh, bh);
+
+    
     if (svar == 1){
     // Øverst
     drawCircle(toDel/2,toDel/2, toDel/2);
