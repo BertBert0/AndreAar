@@ -32,20 +32,6 @@ public class oblig {
       stmt.executeUpdate(sql);
       utTxt = "Databasen er opprettet - ok!"; 
 
-
-
-       ResultSet rs   = stmt.executeQuery(sql); // rs blir her en rad i tabellen
-      String fornavn, etternavn, adr;
-      int nr;
- 
-      while (rs.next()) { // Automatisk splitter radene opp i enkle verdier pga rs.
-        nr        = rs.getInt("Tlf");
-        fornavn   = rs.getString("Fornavn");
-        etternavn = rs.getString("Etternavn");
-        adr       = rs.getString("Adresse");
-        utTxt += nr + ", " + fornavn + " " + etternavn + " - " + adr + "\n";
-      }
-
       }
     catch (Exception e) {  
       utTxt = "Databasespørring feilet!";
@@ -97,7 +83,7 @@ public class oblig {
 
 
   private static String sqlNyDB() {
-    return "create table if not exists kontakt(tlf integer primary key, Fornavn varchar(50), Etternavn varchar(50) DEFAULT '-', Adresse varchar(50) DEFAULT '-' );"
+    return "create table if not exists kontakt(Tlf integer primary key, Fornavn varchar(50), Etternavn varchar(50) DEFAULT '-', Adresse varchar(50) DEFAULT '-' );"
             + "insert into kontakt values(24131577, 'Per',      'Olsen', 'Bakken 4, 3800 Bø');"
             + "insert into kontakt values(13151731, 'Anne',     'Hansen', 'Mellomlia, 5020 Bergen');" 
             + "insert into kontakt values(41131527, 'Jon Ola',  'Bakken', '-');"
